@@ -1,0 +1,19 @@
+name: Create Output File
+
+on:
+  push:
+     branches: [ main ]
+  workflow_dispatch: # 수동 실행도 가능하게
+     
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: print
+        run: echo "hello action github!"         
+        
